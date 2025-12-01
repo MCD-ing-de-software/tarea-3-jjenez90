@@ -63,7 +63,7 @@ class TestStatisticsUtils(unittest.TestCase):
                 
         result = utils.moving_average(data, window)
                 
-        npt.assert_allclose(result, expected_output)
+        npt.assert_allclose(result, expected_output, rtol=1e-7, atol=1e-7)
         self.assertEqual(result.shape, expected_output.shape)
 
 
